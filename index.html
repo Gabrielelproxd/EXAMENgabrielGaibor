@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroConnect - Inicio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilo para el ícono en la parte superior izquierda */
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 70px; /* Ajusta el tamaño del ícono */
+    }
+    
+    /* Estilo para el banner de fondo en la sección hero */
+    .hero {
+      background-image: url('icono-baner.jpg'); /* Cambia la ruta a tu imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      color: rgb(255, 255, 255); /* Cambia el color del texto si es necesario */
+      padding: 70px; /* Ajusta el espacio interno */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="products.html">Servicios</a></li>
+        <li><a href="about.html">Acerca de Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <!-- Ícono agregado aquí -->
+    <img src="icono1.avif" alt="Ícono ElectroConnect" class="logo"> <!-- Cambia la ruta a tu ícono -->
+  </header>
+
+  <section class="hero">
+    <h1>Bienvenido a <span class="highlight">ElectroConnect</span></h1>
+    <p>Tu aliado en tecnología y componentes electrónicos.</p>
+    <p>Gracias por visitar nuestro sitio web, donde ofrecemos productos de alta calidad y asesoramiento experto para todos tus proyectos tecnológicos.</p>
+    <a href="#productos" class="cta-button">Explora nuestros productos</a>
+  </section>
+
+  <section class="carousel">
+    <div class="carousel-item active">
+      <img src="ima 1.jfif" alt="Banner 1">
+    </div>
+    <div class="carousel-item">
+      <img src="ima2.jfif" alt="Banner 2">
+    </div>
+    <div class="carousel-item">
+      <img src="ima3.jfif" alt="Banner 3">
+    </div>
+  </section>
+
+  <section id="productos" class="products">
+    <h2>Nuestros Productos Destacados</h2>
+    <p>Explora algunos de nuestros mejores productos para llevar tus proyectos tecnológicos al siguiente nivel.</p>
+    <div class="filters">
+      <button onclick="filterProducts('all')">Todos</button>
+      <button onclick="filterProducts('sensors')">Sensores</button>
+      <button onclick="filterProducts('microcontrollers')">Microcontroladores</button>
+      <button onclick="filterProducts('accessories')">Accesorios</button>
+    </div>
+
+    <div class="product-container">
+      <!-- Ejemplo de productos -->
+      <div class="product" data-category="sensors">
+        <img src="Sensor-de-temperatura.jpg" alt="Sensor de Temperatura">
+        <h3>Sensor de Temperatura</h3>
+        <p>Ideal para monitoreo en proyectos de domótica.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️☆ (4.0)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('Sensor de Temperatura', 'Ideal para monitoreo en proyectos de domótica.');">Más Información</a>
+      </div>
+
+      <div class="product" data-category="sensors">
+        <img src="sensor de luz.jfif" alt="Sensor de Luz">
+        <h3>Sensor de Luz</h3>
+        <p>Para controlar la iluminación en proyectos de automatización.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('Sensor de Luz', 'Para controlar la iluminación en proyectos de automatización.');">Más Información</a>
+      </div>
+
+      <div class="product" data-category="sensors">
+        <img src="Sensor de movimiento.jpg" alt="Sensor de Movimiento">
+        <h3>Sensor de Movimiento</h3>
+        <p>Ideal para sistemas de seguridad.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️☆ (4.5)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('Sensor de Movimiento', 'Ideal para sistemas de seguridad.');">Más Información</a>
+      </div>
+
+      <div class="product" data-category="microcontrollers">
+        <img src="Arduino uno.jfif" alt="Arduino Uno">
+        <h3>Arduino Uno</h3>
+        <p>Placa de desarrollo versátil para tus proyectos.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('Arduino Uno', 'Placa de desarrollo versátil para tus proyectos.');">Más Información</a>
+      </div>
+
+      <div class="product" data-category="microcontrollers">
+        <img src="Raspberry Pi 4.jpg" alt="Raspberry Pi 4">
+        <h3>Raspberry Pi 4</h3>
+        <p>Ordenador de placa reducida para múltiples aplicaciones.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('Raspberry Pi 4', 'Ordenador de placa reducida para múltiples aplicaciones.');">Más Información</a>
+      </div>
+
+      <div class="product" data-category="microcontrollers">
+        <img src="ESP32.jpg" alt="ESP32">
+        <h3>ESP32</h3>
+        <p>Microcontrolador con conectividad Wi-Fi y Bluetooth.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('ESP32', 'Microcontrolador con conectividad Wi-Fi y Bluetooth.');">Más Información</a>
+      </div>
+
+      <div class="product" data-category="accessories">
+        <img src="Módulo de Relé.jpg" alt="Módulo de Relé">
+        <h3>Módulo de Relé</h3>
+        <p>Controla dispositivos eléctricos con facilidad.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️☆ (4.0)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('Módulo de Relé', 'Controla dispositivos eléctricos con facilidad.');">Más Información</a>
+      </div>
+
+      <div class="product" data-category="accessories">
+        <img src="Fuente de Poder 5V.jpg" alt="Fuente de Poder">
+        <h3>Fuente de Poder 5V</h3>
+        <p>Perfecta para alimentar proyectos de electrónica.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('Fuente de Poder 5V', 'Perfecta para alimentar proyectos de electrónica.');">Más Información</a>
+      </div>
+
+      <div class="product" data-category="accessories">
+        <img src="Cables Jumper.jpg" alt="Cables Jumper">
+        <h3>Cables Jumper</h3>
+        <p>Conexiones rápidas y fáciles para tus proyectos.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️☆ (4.0)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('Cables Jumper', 'Conexiones rápidas y fáciles para tus proyectos.');">Más Información</a>
+      </div>
+
+      <div class="product" data-category="accessories">
+        <img src="Protoboard.jpg" alt="Protoboard">
+        <h3>Protoboard</h3>
+        <p>Ideal para prototipar tus ideas electrónicas.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️ (5.0)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('Protoboard', 'Ideal para prototipar tus ideas electrónicas.');">Más Información</a>
+      </div>
+
+      <div class="product" data-category="accessories">
+        <img src="Sensor de Gas.jfif" alt="Sensores de Gas">
+        <h3>Sensor de Gas</h3>
+        <p>Detecta gases nocivos para seguridad en proyectos.</p>
+        <p class="rating">⭐️⭐️⭐️⭐️☆ (4.5)</p>
+        <a href="#" class="cta-button" onclick="showProductInfo('Sensor de Gas', 'Detecta gases nocivos para seguridad en proyectos.');">Más Información</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Opiniones de nuestros clientes</h2>
+    <div class="testimonial">
+      <p>"ElectroConnect me ayudó a encontrar exactamente lo que necesitaba para mi proyecto de robótica. ¡Muy recomendado!"</p>
+      <cite>- Juan Pérez, Ingeniero Electrónico</cite>
+    </div>
+    <div class="testimonial">
+      <p>"La calidad de los componentes es excelente y la atención al cliente es aún mejor. ¡Volveré a comprar sin duda!"</p>
+      <cite>- María Gómez, Desarrolladora</cite>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 ElectroConnect. Todos los derechos reservados.</p>
+    <div class="social-media">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
